@@ -9,7 +9,7 @@ fun main() {
     val commandsSequence = "FFLFFRFFL"
     println("Sending command sequence: $commandsSequence")
 
-    val roverAfterExecutingSequence = commandsSequence.parse().fold(landed, Rover::execute)
+    val roverAfterExecutingSequence = landed.execute(commandsSequence)
 
     println("Sequence executed: $roverAfterExecutingSequence")
 

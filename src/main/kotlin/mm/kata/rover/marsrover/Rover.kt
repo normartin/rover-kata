@@ -12,6 +12,6 @@ fun Rover.execute(command: Command): Rover = when (command) {
     Command.F -> this.copy(position = position.forward(heading))
 }
 
-
+fun Rover.execute(commandString: String): Rover = commandString.parse().fold(this, Rover::execute)
 
 
