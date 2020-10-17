@@ -22,6 +22,6 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
-      run: ./gradlew clean jacocoTestCoverageVerification assemble
+      run: ./gradlew clean jacocoTestCoverageVerification shadowJar
     - name: Run demo application
-      run: java -jar build/libs/mars-rover-0.0.1-SNAPSHOT.jar
+      run: java -jar build/libs/mars-rover-0.0.1-SNAPSHOT-all.jar

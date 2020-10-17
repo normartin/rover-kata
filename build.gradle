@@ -1,7 +1,7 @@
 plugins {
     id "org.jetbrains.kotlin.jvm" version "1.4.10"
     id 'jacoco'
-    id 'application'
+    id 'com.github.johnrengelman.shadow' version '6.1.0'
 }
 
 group = "mm.kata.rover"
@@ -33,8 +33,12 @@ compileKotlin {
     }
 }
 
-application{
-    mainClassName "mm.kata.rover.marsrover.MarsRoverDemoApplicationKt"
+jar {
+    manifest {
+        attributes(
+            'Main-Class': 'mm.kata.rover.marsrover.MarsRoverDemoApplicationKt'
+        )
+    }
 }
 
 jacocoTestReport {
