@@ -1,5 +1,6 @@
 package mm.kata.rover.marsrover
 
+import mm.kata.rover.marsrover.internal.forward
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 
